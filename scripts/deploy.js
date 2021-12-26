@@ -8,8 +8,8 @@ async function main() {
   const CHAINID = await hre.network.provider.send("eth_chainId");
 
   // hardhat => 800
-  // mumbai => 6000
-  const TIME_OUT = CHAINID == 0x7a69 ? 800 : 10000;
+  // mumbai => 20000
+  const TIME_OUT = CHAINID == 0x7a69 ? 800 : 20000;
 
   const DECRYPT = await hre.ethers.getContractFactory("decrypt");
   const Decrypt = await DECRYPT.deploy();
